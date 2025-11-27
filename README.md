@@ -1,6 +1,7 @@
 # Honors IT Inventory Management System
 
 ### Preview
+<img width="1897" height="905" alt="image" src="https://github.com/user-attachments/assets/71ef2ca5-608d-45b4-87f1-4eb7c52bdde1" />
 
 
 ## Tech Stack
