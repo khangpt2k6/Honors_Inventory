@@ -1,0 +1,122 @@
+.navbar {
+  background: linear-gradient(90deg, #004d35 0%, #006747 30%, #1a7a5c 60%, #3d9d7a 100%);
+  padding: var(--space-5) var(--space-8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: url('/usf_logo.png') no-repeat center right;
+  background-size: contain;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-logo {
+  height: 52px;
+  width: auto;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  background: var(--white);
+  padding: 4px;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar-title {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+}
+
+.navbar-title-main {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.navbar-title-sub {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 2px;
+}
+
+.navbar-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  background: var(--white);
+  color: var(--usf-green);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-button:hover {
+  background: var(--usf-gold);
+  color: var(--gray-900);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-button:active {
+  transform: translateY(0);
+}
+
+.navbar-button svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.navbar-button:hover svg {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: var(--space-4);
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
+  
+  .navbar-left {
+    flex-direction: column;
+  }
+  
+  .navbar-title-main {
+    font-size: 1.25rem;
+  }
+  
+  .navbar-title-sub {
+    font-size: 0.875rem;
+  }
+}
+
